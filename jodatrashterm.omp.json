@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
-  "console_title_template": "❯  {{.Folder}}{{if .Root}} :: root{{end}}",
+  "console_title_template": "{{.UserName}} in ~/{{.Folder}}{{if .Root}} :: root{{end}}",
   "palette": {
     "micolor": "#758e6a",
     "tan": "#CC3802",
