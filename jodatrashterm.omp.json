@@ -1,0 +1,162 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "❯  {{.Folder}}{{if .Root}} :: root{{end}}",
+  "palette": {
+    "micolor": "#758e6a",
+    "tan": "#CC3802",
+    "teal": "#047E84",
+    "plum": "#9A348E",
+    "blush": "#DA627D",
+    "salmon": "#FCA17D",
+    "sky": "#86BBD8",
+    "teal_blue": "#33658A"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "template": "\u250c\u2500\u2500",
+          "foreground": "#d2ff5e",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "background": "#424242",
+          "foreground": "#d2ff5e",
+          "style": "diamond",
+          "template": " {{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "\ue0b0",
+          "shell": "bash",
+          "type": "time",
+          "properties": {
+            "style": "full",
+            "time_format": "Mon"
+          }
+        },
+        {
+          "background": "#666666",
+          "foreground": "#e2e2e2",
+          "style": "diamond",
+          "template": "{{ .CurrentDate | date .Format }} ",
+          "trailing_diamond": "\ue0b0",
+          "shell": "bash",
+          "type": "time",
+          "properties": {
+            "style": "full",
+            "time_format": " 3:04"
+          }
+        },
+
+        {
+          "background": "#333333",
+          "foreground": "#D4AAFC",
+          "leading_diamond": "<transparent,background>\uE0B0</>",
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "style": "folder"
+          },
+          "style": "diamond",
+          "template": " <#DCB977>local:(</>{{ .Path }}<#DCB977>)</> ",
+          "type": "path"
+        },
+
+        {
+          "background": "#424242",
+          "foreground": "#56B6C2",
+          "leading_diamond": "<#333333>\uE0B0</><#62ED8B> ➜</>",
+          "trailing_diamond": "\ue0b4",
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "branch_icon": ""
+          },
+          "style": "diamond",
+          "template": " <#DCB977>git:(</>{{ .HEAD }}<#DCB977>)</>{{ if (gt .Ahead 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#98c379>{{ .Staging.String }}</>{{ end }} <#2e2e2e>\u2502</> {{ if .Working.Changed }}<#e06c75>{{ .Working.String }}</>{{ end }} ",
+          "type": "git"
+        }
+      ]
+    },
+
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "newline": false,
+      "segments": [
+        {
+          "background": "#666666",
+          "foreground": "#e2e2e2",
+          "invert_powerline": true,
+          "style": "powerline",
+          "powerline_symbol": "\ue0b2",
+          "template": " {{ .Output }} ",
+          "type": "command",
+          "properties": {
+            "command": "git log --pretty=format:%cr -1 || date +%H:%M:%S",
+            "shell": "bash"
+          }
+        },
+        {
+          "background": "#424242",
+          "foreground": "#dddddd",
+          "invert_powerline": true,
+          "style": "diamond",
+          "template": "{{ if eq \"False\" (title (default \"False\" .Env.DISABLE_SEGMENT_PRIMARY_EXEC_TIME)) }} {{ .FormattedMs }}{{ end }} ",
+          "type": "executiontime",
+          "properties": {
+            "style": "austin",
+            "threshold": 1
+          }
+        },
+
+        {
+          "background": "#89a3ac",
+          "foreground": "#363636",
+          "invert_powerline": true,
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "type": "shell",
+          "template": " {{ .Name }} ",
+          "trailing_diamond": ""
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#ed6262",
+          "style": "diamond",
+          "template": "\u2502 ✗ External command failed",
+          "type": "status"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "template": "\u2514\u2500",
+          "foreground": "#d2ff5e",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "template": " $",
+          "foreground": "#d2ff5e",
+          "type": "text",
+          "style": "plain"
+        }
+      ]
+    }
+  ],
+  "version": 3,
+  "final_space": true
+}

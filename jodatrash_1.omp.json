@@ -1,0 +1,180 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "console_title_template": "❯  {{.Folder}}{{if .Root}} :: root{{end}}",
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\u250c",
+          "foreground": "#d3d7cf",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "background": "#003543",
+          "foreground": "#d2ff5e",
+          "style": "plain",
+          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}",
+          "type": "os"
+        },
+        {
+          "background": "#003543",
+          "foreground": "#d2ff5e",
+          "leading_diamond": "",
+          "style": "diamond",
+          "template": " {{ .Name }} ",
+          "type": "shell"
+        },
+        {
+          "background": "#424242",
+          "foreground": "#d2ff5e",
+          "powerline_symbol": "\ue0b0",
+          "style": "powerline",
+          "template": "{{ .CurrentDate | date .Format }} ",
+          "properties": {
+            "cache_duration": "none",
+            "style": "full",
+            "time_format": " 3:04"
+          },
+          "type": "time"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " {{ .UserName }}:(<#D4AAFC>local</>) ",
+          "foreground": "#DCB977",
+          "type": "session",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "➜ ",
+          "foreground": "#62ED8B",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "style": "folder"
+          },
+          "template": "{{ .Path }} ",
+          "foreground": "#56B6C2",
+          "type": "path",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "branch_icon": " \ue725 ",
+            "cache_duration": "none"
+          },
+          "template": "<#DCB977>git:(</>{{ .HEAD }}<#DCB977> ) </>",
+          "foreground": "#D4AAFC",
+          "type": "git",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none",
+            "style": "austin",
+            "threshold": 0
+          },
+          "template": "{{ .FormattedMs }}<#eaeaea></> ",
+          "foreground": "#DCB977",
+          "type": "executiontime",
+          "style": "plain"
+        },
+
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "✗",
+          "foreground": "#BF616A",
+          "type": "status",
+          "style": "plain"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#424242",
+          "foreground": "#e46b4a",
+          "properties": {
+            "always_enabled": true,
+            "branch_icon": "\ue725 ",
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true,
+            "fetch_worktree_count": true
+          },
+          "invert_powerline": true,
+          "style": "powerline",
+          "powerline_symbol": "\ue0b2",
+          "template": "{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }} ",
+          "type": "git"
+        },
+        {
+          "background": "#424242",
+          "foreground": "#e46b4a",
+          "invert_powerline": true,
+          "leading_diamond": "\ue0b2",
+          "style": "diamond",
+          "type": "command",
+          "template": " {{ .Output }} ",
+          "trailing_diamond": "",
+          "properties": {
+            "cache_duration": "none",
+            "command": "git log --pretty=format:%cr -1 || date +%H:%M:%S",
+            "shell": "bash"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\u2514\u2500",
+          "foreground": "#d3d7cf",
+          "type": "text",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " $",
+          "foreground": "#d3d7cf",
+          "type": "text",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 3,
+  "final_space": true
+}
