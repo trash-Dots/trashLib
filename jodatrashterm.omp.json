@@ -3,13 +3,8 @@
   "console_title_template": "{{.UserName}} in ~/{{.Folder}}{{if .Root}} :: root{{end}}",
   "palette": {
     "micolor": "#758e6a",
-    "tan": "#CC3802",
-    "teal": "#047E84",
-    "plum": "#9A348E",
-    "blush": "#DA627D",
-    "salmon": "#FCA17D",
-    "sky": "#86BBD8",
-    "teal_blue": "#33658A"
+    "red": "#e06c75",
+    "green": "#98c379"
   },
   "blocks": [
     {
@@ -67,6 +62,12 @@
         {
           "background": "#424242",
           "foreground": "#56B6C2",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:red{{ end }}",
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#424242{{ end }}",
+            "{{ if gt .Ahead 0 }}p:green{{ end }}",
+            "{{ if gt .Behind 0 }}#e2e2e2{{ end }}"
+          ],
           "leading_diamond": "<#333333>\uE0B0</><#62ED8B> ➜</>",
           "trailing_diamond": "\ue0b4",
           "properties": {
@@ -75,7 +76,7 @@
             "branch_icon": ""
           },
           "style": "diamond",
-          "template": " <#DCB977>git:(</>{{ .HEAD }}<#DCB977>)</> {{ if (gt .Ahead 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <#98c379>{{ .Staging.String }}</>{{ end }} <#2e2e2e>\u2502</> {{ if .Working.Changed }}<#e06c75>{{ .Working.String }}</>{{ end }} ",
+          "template": " <#DCB977>git:(</>{{ .HEAD }}<#DCB977>)</> {{ if (gt .Ahead 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <p:green>{{ .Staging.String }}</>{{ end }} <#2e2e2e>\u2502</> {{ if .Working.Changed }}<p:red>{{ .Working.String }}</p:red>{{ end }}</> ",
           "type": "git"
         }
       ]
