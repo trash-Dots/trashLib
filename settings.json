@@ -1,0 +1,147 @@
+{
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font Mono",
+    // "terminal.integrated.fontFamily": "FiraCode Nerd Font Propo",
+    // "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font Mono",
+    // "terminal.integrated.fontFamily": "Fragment Mono",
+    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.cursorStyleInactive": "block",
+    "terminal.integrated.cursorBlinking": true,
+  
+    "git.autofetch": true,
+    "explorer.confirmDelete": false,
+    "explorer.compactFolders": false,
+  
+    "editor.formatOnSave": true,
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "hidden",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.guides.indentation": false,
+    "editor.glyphMargin": false,
+    "editor.matchBrackets": "never",
+    "editor.fontSize": 15.5,
+    "editor.fontFamily": "JetBrainsMono Nerd Font Mono, CaskaydiaCove Nerd Font Mono, FiraCode Nerd Font Propo, Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "explicit",
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.bracketPairsHorizontal": false,
+    //"editor.linkedEditing": true,
+    "editor.stickyScroll.enabled": false,
+    "editor.renderLineHighlight": "all",
+    "editor.wordWrap": "on",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.tokenColorCustomizations": {
+      "textMateRules": [
+        {
+          "scope": ["comment"],
+          "settings": {
+            "fontStyle": "italic"
+            // "foreground": "#d19a66" color de texto
+          }
+        }
+      ]
+    },
+  
+    "files.autoSave": "afterDelay",
+    "workbench.colorTheme": "Theme Flat",
+    "workbench.productIconTheme": "material-product-icons",
+    "workbench.iconTheme": "vscode-jetbrains-icon-theme",
+    "workbench.tree.indent": 20,
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "workbench.colorCustomizations": {
+      "[Theme Flat]": {
+        "tree.indentGuidesStroke": "#282c3400",
+        "editorGroup.dropBackground": "#40485962",
+        "list.dropBackground": "#40485962",
+        "focusBorder": "#32384215",
+        "sideBar.border": "#3238429d",
+        "panel.border": "#3238429d",
+        "editorGroup.border": "#3238429d",
+        "statusBar.border": "#282c34",
+        "terminal.foreground": "#c4c4c4",
+        "tab.border": "#282c34",
+        "editor.selectionHighlightBorder": "#0252ff00",
+        "editor.wordHighlightBorder": "#00000000",
+        "editor.wordHighlightStrongBorder": "#7f848e00",
+        "editor.wordHighlightBackground": "#67769660",
+        "editor.wordHighlightStrongBackground": "#abb2bf26",
+        "list.focusAndSelectionOutline": "#5a5a5a2d",
+        "activityBarBadge.background": "#0366d6",
+        "panelTitle.activeBorder": "#f9826c",
+        "activityBar.activeBorder": "#f9826c",
+        "tab.activeBorderTop": "#f9826c",
+        "terminal.tab.activeBorder": "#f9826c"
+      },
+      "terminal.background": "#00000000"
+    },
+    "indenticator.width": 0.1,
+    "indenticator.color.dark": "rgba(255, 255, 255, 0.06)",
+  
+    "[javascript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+  
+    "liveServer.settings.donotShowInfoMsg": true,
+  
+    "cSpell.language": "en,es",
+    "cSpell.userWords": [
+      "atlascode",
+      "atlassian",
+      "austin",
+      "autofetch",
+      "bitbucket",
+      "calt",
+      "Caskaydia",
+      "codigoconjuan",
+      "CSPRMX",
+      "donot",
+      "esbenp",
+      "executiontime",
+      "Fira",
+      "firstname",
+      "forof",
+      "indenticator",
+      "jetbrains",
+      "jodatrash",
+      "jonat",
+      "lastname",
+      "Numericos",
+      "onum",
+      "powerline",
+      "Propo",
+      "quser",
+      "redhat",
+      "rgba",
+      "smoothstep",
+      "worktree"
+    ],
+    "diffEditor.hideUnchangedRegions.enabled": true,
+    "breadcrumbs.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "workbench.sideBar.location": "right",
+    "cSpell.ignoreWords": [
+      "atlascode",
+      "atlassian",
+      "austin",
+      "bitbucket",
+      "codigoconjuan",
+      "executiontime",
+      "jonat",
+      "powerline",
+      "redhat"
+    ],
+    "workbench.startupEditor": "none",
+    "[json]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "terminal.integrated.fontLigatures": true,
+    "window.confirmSaveUntitledWorkspace": false,
+    "indentRainbow.indicatorStyle": "classic",
+    "indentRainbow.colorOnWhiteSpaceOnly": true,
+  }
+  
