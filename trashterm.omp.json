@@ -48,6 +48,7 @@
         {
           "background": "#333333",
           "foreground": "#D4AAFC",
+          "trailing_diamond": "",
           "properties": {
             "fetch_stash_count": true,
             "fetch_status": true,
@@ -57,7 +58,6 @@
           "template": " <#DCB977>local:(</>{{ .Path }}<#DCB977>)</> ",
           "type": "path"
         },
-
         {
           "background": "#424242",
           "foreground": "#56B6C2",
@@ -67,15 +67,14 @@
             "{{ if gt .Ahead 0 }}p:green{{ end }}",
             "{{ if gt .Behind 0 }}#e2e2e2{{ end }}"
           ],
-          "leading_diamond": "<#333333>\uE0B0</><#62ED8B> ➜</>",
-          "trailing_diamond": "\ue0b0",
+          "powerline_symbol": "\ue0b0",
           "properties": {
             "fetch_stash_count": true,
             "fetch_status": true,
             "branch_icon": ""
           },
-          "style": "diamond",
-          "template": " <#DCB977>git:(</>{{ .HEAD }}<#DCB977>)</> {{ if (gt .Ahead 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <p:green>{{ .Staging.String }}</>{{ end }} <#666666>|</> {{ if .Working.Changed }}<p:red>{{ .Working.String }}</>{{ end }} ",
+          "style": "powerline",
+          "template": "<#62ED8B> ➜ </><#DCB977>git:(</>{{ .HEAD }}<#DCB977>)</>{{ if (gt .Ahead 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <p:green>{{ .Staging.String }}</>{{ end }} <#666666>|</> {{ if .Working.Changed }}<p:red>{{ .Working.String }}</>{{ end }} ",
           "type": "git"
         }
       ]
