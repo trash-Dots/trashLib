@@ -18,7 +18,7 @@
       "segments": [
         {
           "template": "\u250c\u2500\u2500",
-          "foreground": "#e2e2e2",
+          "foreground": "#666666",
           "type": "text",
           "style": "plain"
         },
@@ -147,7 +147,7 @@
       "segments": [
         {
           "template": "\u2514\u2500",
-          "foreground": "#e2e2e2",
+          "foreground": "#666666",
           "type": "text",
           "style": "plain"
         },
