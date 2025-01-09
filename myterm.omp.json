@@ -78,7 +78,7 @@
             "branch_icon": ""
           },
           "style": "powerline",
-          "template": "<#62ED8B> ➜ </><#DCB977>git:(</>{{ .HEAD }}<#DCB977>)</>{{ if (gt .Ahead 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if .Staging.Changed }} <p:green>{{ .Staging.String }}</>{{ end }} <#666666>|</> {{ if .Working.Changed }}<p:red>{{ .Working.String }}</>{{ end }} ",
+          "template": "<#62ED8B> ➜ </><#DCB977>git:(</>{{ .HEAD }}{{ if (gt .Ahead 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}{{ if (gt .Behind 0)}}<#56b6c2>{{ .BranchStatus }}</>{{ end }}<#DCB977>)</>{{ if .Staging.Changed }}<#666666> |</> <p:green>{{ .Staging.String }}{{ end }}{{ if .Working.Changed }}</><#666666> |</> <p:red>{{ .Working.String }}</>{{ end }} ",
           "type": "git"
         }
       ]
