@@ -4,7 +4,11 @@
   "palette": {
     "micolor": "#758e6a",
     "red": "#e06c75",
-    "green": "#98c379"
+    "green": "#98c379",
+    "black-one": "#252526",
+    "black-two": "#2b2b2b",
+    "black-tree": "#323233",
+    "black-four": "#3c3f41"
   },
   "blocks": [
     {
