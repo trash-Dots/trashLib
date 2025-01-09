@@ -8,7 +8,10 @@
     "black-one": "#252526",
     "black-two": "#2b2b2b",
     "black-tree": "#323233",
-    "black-four": "#3c3f41"
+    "black-four": "#3c3f41",
+    "blue-pull": "#56B6C2",
+    "orange-push":"#dd8245",
+    "blue-wait":"#89a3ac"
   },
   "blocks": [
     {
@@ -64,12 +67,12 @@
         },
         {
           "background": "#333333",
-          "foreground": "#56B6C2",
+          "foreground": "#98c379",
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}p:red{{ end }}",
-            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}#424242{{ end }}",
-            "{{ if gt .Ahead 0 }}p:green{{ end }}",
-            "{{ if gt .Behind 0 }}#e2e2e2{{ end }}"
+            "{{ if and (gt .Ahead 0) (gt .Behind 0) }}p:blue-wait{{ end }}",
+            "{{ if gt .Ahead 0 }}p:orange-push{{ end }}",
+            "{{ if gt .Behind 0 }}p:blue-pull{{ end }}"
           ],
           "powerline_symbol": "\ue0b0",
           "properties": {
